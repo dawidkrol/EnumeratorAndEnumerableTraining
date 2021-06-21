@@ -1,5 +1,6 @@
 ﻿using ItemsAndTheirFilters;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace EnumeratorAndEnumerableTraining
@@ -8,10 +9,35 @@ namespace EnumeratorAndEnumerableTraining
     {
         static void Main(string[] args)
         {
-            var f = new GoodFilter();
-            foreach (var item in f.FilterBy(GetItems(),new ColorSpecification(Color.black)))
+            //var filter = new GoodFilter();
+            //foreach (var item in filter.FilterBy(GetItems(),new ColorSpecification(Color.black)))
+            //{
+            //    Console.WriteLine(item.Name);
+            //}
+
+            EnumerableT vs = new EnumerableT("Dawid","Król",new DateTime(2001,04,22));
+            //foreach (var item in vs)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //if(vs is IEnumerable coll)
+            //{
+            //    foreach (var item in coll)
+            //    {
+            //        Console.WriteLine(item);
+            //    }
+            //}
+
+            ColletionT vs1 = new ColletionT("Dawid", "Król", new DateTime(2001, 04, 22));
+            Console.WriteLine(vs1.Contains("Dawid"));
+            vs1.Add("dodatkowe1");
+            vs1.Add("dodatkowe2");
+            vs1.Add("dodatkowe3");
+            vs1.Clear();
+            foreach (var item in vs1)
             {
-                Console.WriteLine(item.Name);
+                Console.WriteLine(item);
             }
         }
         static List<IItem> GetItems()
