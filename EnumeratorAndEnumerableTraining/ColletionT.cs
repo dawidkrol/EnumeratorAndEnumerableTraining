@@ -2,9 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnumeratorAndEnumerableTraining
 {
@@ -31,7 +28,7 @@ namespace EnumeratorAndEnumerableTraining
 
         public void Clear()
         {
-            additionalData = new Collection<string>();
+            additionalData.Clear();
         }
 
         public bool Contains(string item)

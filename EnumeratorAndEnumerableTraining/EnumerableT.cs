@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnumeratorAndEnumerableTraining
 {
@@ -12,7 +9,7 @@ namespace EnumeratorAndEnumerableTraining
         string _imie { get; set; }
         string _nazwisko { get; set; }
         DateTime _dataUrodzenia { get; set; }
-        public EnumerableT(string imie,string nazwisko,DateTime dataUrodzenia)
+        public EnumerableT(string imie, string nazwisko, DateTime dataUrodzenia)
         {
             _imie = imie;
             _nazwisko = nazwisko;
